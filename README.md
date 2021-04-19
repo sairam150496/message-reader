@@ -11,20 +11,20 @@ This app internally uses touch events which are only supported by mobile devices
 
 # Screenshots
 
-## App Initial View
+## App's Initial View
 
 ![image](https://user-images.githubusercontent.com/50438335/115217148-0dc04e00-a0ba-11eb-9f72-37d4ffdb87f2.png)
 
-## App's View On Scrolling Left
+## App's View On Scrolling Left To Right
 ![image](https://user-images.githubusercontent.com/50438335/115217365-48c28180-a0ba-11eb-849c-00b67ef4f5fa.png)
 
-## App's View On Scrolling Right
+## App's View On Scrolling Right To Left
 ![image](https://user-images.githubusercontent.com/50438335/115217529-75769900-a0ba-11eb-91c7-ef67e2cbe61b.png)
 
-## Edit Message View
+## App's View On Clicking Edit Option 
 ![image](https://user-images.githubusercontent.com/50438335/115218060-ffbefd00-a0ba-11eb-943e-58925645aae1.png)
 
-## On Edit and Save View
+## App's View On Updating And Saving The Message
 ![image](https://user-images.githubusercontent.com/50438335/115218653-a3101200-a0bb-11eb-9801-4d4269b8a4f3.png)
 
 
@@ -46,7 +46,7 @@ This app internally uses touch events which are only supported by mobile devices
 ```
 npm install
 npm start
-npm test (To execute test scripts, not written in the interest of time will update and strike of the comment once I update em.)
+npm test (To execute test scripts, not written in the interest of time will update and strike the comment once I update em.)
 ```
 
 
