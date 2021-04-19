@@ -1,4 +1,4 @@
-import React from "react";
+import { v4 } from "uuid";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { MessageReaderContainer } from "../containers";
 
@@ -6,7 +6,13 @@ export const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact strict component={MessageReaderContainer} />
+        <Route
+          path="/"
+          key={v4()}
+          exact
+          strict
+          component={MessageReaderContainer}
+        />
       </Switch>
     </Router>
   );

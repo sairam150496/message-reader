@@ -3,5 +3,7 @@ export interface IMessageCardProps {
   avatar: string;
   title: string;
   subTitle: string;
-  onDelete?: () => void;
+  id: string;
+  onDelete?: (id: string) => void;
+  onEdit?: (id: string) => void;
 }

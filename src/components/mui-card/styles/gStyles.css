@@ -1,0 +1,8 @@
+@keyframes btn-animation {
+  0% {
+    width: 2%;
+  }
+  100% {
+    width: 10%;
+  }
+}
