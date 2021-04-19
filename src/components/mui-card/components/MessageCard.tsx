@@ -33,17 +33,30 @@ export const MessageCard = (props: IMessageCardProps) => {
     onDelete(idArr[idArr.length - 1]);
   };
 
+  const handleMouseDown = (event: any)=>{
+    setTouchInitPostn(event.clientX);
+  }
+
+  const handleMouseUp = (event: any)=>{
+    const currentMovPostn = event.clientX;
+    movementHandle(currentMovPostn, touchInitPostn)
+  }
+
   const handleTouchStart = (event: any) => {
     setTouchInitPostn(event.touches[0].clientX);
   };
 
+  
+
   const handleEditClick = (event: any) => {
     const idArr = event.target.id.split("_");
     onEdit(idArr[idArr.length - 1]);
+    const editElemStyle = (editRef.current! as any).style;
+    editElemStyle.display = "";
+    editElemStyle.animationName = "";
   };
 
-  const handleTouchEnd = (event: any) => {
-    const currentMovPostn = event.changedTouches[0].clientX;
+  const movementHandle = (currentMovPostn: number, touchInitPostn: number)=>{
     const delElemStyle = (deleteRef.current! as any).style;
     const editElemStyle = (editRef.current! as any).style;
     if (currentMovPostn > touchInitPostn + 50) {
@@ -67,7 +80,14 @@ export const MessageCard = (props: IMessageCardProps) => {
       delElemStyle.display = "";
       delElemStyle.animationName = "";
     }
+  }
+
+  const handleTouchEnd = (event: any) => {
+    const currentMovPostn = event.changedTouches[0].clientX;
+    movementHandle(currentMovPostn, touchInitPostn)
   };
+
+
 
   return (
     <Card
@@ -75,6 +95,8 @@ export const MessageCard = (props: IMessageCardProps) => {
       id={`card_${props.id}`}
       onTouchEnd={handleTouchEnd}
       onTouchStart={handleTouchStart}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
     >
       <CardActions
         ref={deleteRef}

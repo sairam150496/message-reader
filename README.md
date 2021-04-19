@@ -2,7 +2,7 @@
 
 This is mainly used to read, edit and delete the messages. 
 
-This app internally uses touch events which are only supported by mobile devices. I tried extending the functionalities to @16/9 or greater aspect ratio devices but douldn't do it due to lack of time.
+This app internally uses touch events which are only supported by mobile devices. ~~I tried extending the functionalities to @16/9 or greater aspect ratio devices but douldn't do it due to lack of time.~~
 
 #### Key Functionalities
 
